@@ -14,8 +14,8 @@ import os, ssl, time
 if not os.environ.get('PYTHONHTTPSVERIFY','') and getattr(ssl,'_create_unverified_context',None) :
     ssl._create_default_https_context = ssl._create_unverified_context
 
-X = np.load('csvs/image.npz')['arr_0']
-Y = pd.read_csv('csvs/33.csv')['labels']
+X = np.load('image.npz')['arr_0']
+Y = pd.read_csv('33.csv')['labels']
 print(pd.Series(Y).value_counts())
 
 
